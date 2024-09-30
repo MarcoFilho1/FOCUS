@@ -131,13 +131,13 @@ int main(int argc, const char **argv) {
     return -1;
   }
 
-  if (!capture.open("video.mp4")) {
+  if (!capture.open(0)) {
     cout << "Capture from camera #0 didn't work" << endl;
     return 1;
   }
 
-  capture.set(CAP_PROP_FRAME_WIDTH, 1920);  // Largura desejada
-  capture.set(CAP_PROP_FRAME_HEIGHT, 1080); // Altura desejada
+  // capture.set(CAP_PROP_FRAME_WIDTH, 1920);  // Largura desejada
+  // capture.set(CAP_PROP_FRAME_HEIGHT, 1080); // Altura desejada
 
   if (capture.isOpened()) {
     cout << "Video capturing has been started ..." << endl;
